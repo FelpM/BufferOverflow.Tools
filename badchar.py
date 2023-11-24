@@ -4,8 +4,8 @@
 
 import socket
 
-IP = "192.168.1.2"
-port = 21449
+IP = "192.168.1.2" # altere para o ip da maquina local ou alvo
+port = 21449 # altere para a porta do serviço
 
 def bad_chars():
     # Crie uma lista de inteiros representando os valores hexadecimais desejados
