@@ -1,12 +1,12 @@
 import socket
 from struct import pack
 
-IP = "192.168.1.2"
-port = 21449
+IP = "192.168.1.2" #altere para o ip local ou do alvo
+port = 21449 #altere para a porta onde roda o programa
 
 def fuzz():
     try:
-        for i in range(0,12000,500):
+        for i in range(0,12000,500): #altere de acordo com a demanda
             buffer = b"A"*i
             print("Fuzzing %s bytes" % i)
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
