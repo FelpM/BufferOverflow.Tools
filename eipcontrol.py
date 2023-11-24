@@ -17,3 +17,6 @@ def eip_offset():
 eip_offset()
 #após rodar novamente o script verifique o endereço retornado no xdbg
 # /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q <endereço obitido>
+
+#após este passo verifique o tamanho da pilho com
+#info proc all - no gdb
