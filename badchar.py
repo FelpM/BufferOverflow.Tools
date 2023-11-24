@@ -64,3 +64,4 @@ bad_chars()
 #x/<valor do EIP> $esp+1000
 
 #verifique se todos seguem a sequencia correta, caso não siga retire o byte que causou o erro e repita este passo
+#caso tire algum byte diminua o valor de 256 na subtração do offset
